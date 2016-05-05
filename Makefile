@@ -2,7 +2,7 @@ prefix ?= /usr/local
 libdir ?= $(prefix)/lib
 includedir ?= $(prefix)/include
 
-CFLAGS:=-Wall -g -Wextra $(shell pkg-config glib-2.0 --cflags) -Wswitch-enum -std=gnu11 -O2 -fPIC
+CFLAGS:=$(CFLAGS) -Wall -Wextra $(shell pkg-config glib-2.0 --cflags) -Wswitch-enum -std=gnu11 -fPIC
 SO_VERSION = 0
 VERSION = 0
 INSTALL = install
@@ -15,10 +15,10 @@ lib_objects=setters.o getters.o main.o cmds.o display.o negotiation.o io.o
 all: bot libquasselc.so.$(VERSION) quasselc.pc
 
 libquasselc.so.$(VERSION): $(lib_objects)
-	$(CC) -shared -o $@ -Wl,-soname,libquasselc.so.$(SO_VERSION) $^ $(LDLIBS)
+	$(CC) -shared -o $@ -Wl,-soname,libquasselc.so.$(SO_VERSION) $^ $(LDLIBS) $(LDFLAGS)
 
 bot: bot.o libquasselc.so.$(VERSION)
-	$(CC) -o $@ $^ $(LDLIBS) $(BOTLIBS)
+	$(CC) -o $@ $^ $(LDLIBS) $(BOTLIBS) $(LDFLAGS)
 
 clean:
 	rm -f *.o bot libquasselc.so.$(VERSION) quasselc.pc

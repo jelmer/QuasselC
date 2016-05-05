@@ -8,7 +8,7 @@ LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 %:
-	libdir=/usr/lib/$(DEB_HOST_MULTIARCH) prefix=/usr dh $@
+	CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" libdir=/usr/lib/$(DEB_HOST_MULTIARCH) prefix=/usr dh $@
 
 override_dh_auto_install:
 	dh_auto_install
