@@ -20,7 +20,7 @@ Package: libquasselc-dev
 Architecture: any
 Section: libdevel
 Priority: extra
-Depends: ${misc:Depends}, libquassel0 (= ${binary:Version})
+Depends: ${misc:Depends}, libquasselc0 (= ${binary:Version})
 Description: API to access a Quassel Core - development headers
  Library for accessing QuasselCore using the Quassel protocol.
  .

@@ -1,4 +1,15 @@
 #!/usr/bin/make -f
 
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 %:
-	prefix=/usr dh $@
+	libdir=/usr/lib/$(DEB_HOST_MULTIARCH) prefix=/usr dh $@
+
+override_dh_auto_install:
+	dh_auto_install
+	ln -fs libquasselc.so.0 debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libquasselc.so
