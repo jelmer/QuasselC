@@ -1,0 +1,7 @@
+files
+libquasselc0
+libquasselc-dev
+debhelper-build-stamp
+tmp
+*.substvars
+*.debhelper.log
