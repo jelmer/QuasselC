@@ -1,7 +1,7 @@
 Source: quasselc
 Priority: optional
 Maintainer: Jelmer Vernooĳ <jelmer@debian.org>
-Build-Depends: debhelper (>= 9), pkg-config, libglib2.0-dev, irssi-dev
+Build-Depends: debhelper (>= 9), pkg-config, libglib2.0-dev
 Standards-Version: 3.9.8
 Section: libs
 Homepage: https://github.com/phhusson/quasselc
@@ -11,16 +11,17 @@ Vcs-Browser: http://anonscm.debian.org/cgit/collab-maint/quasselc.git/
 Package: libquasselc0
 Architecture: any
 Section: libs
-Depends: ${shlibs:Depends}, ${misc:Depends}, irssi
-Description: quassel plugin for irssi
- irssi plugin which allows connecting to a quassel server.
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: quassel-core
+Description: API to access a Quassel Core
+ Library for accessing QuasselCore using the Quassel protocol.
 
 Package: libquasselc-dev
 Architecture: any
 Section: libdevel
 Priority: extra
 Depends: ${misc:Depends}, libquassel0 (= ${binary:Version})
-Description: quassel plugin for irssi - debugging symbols
- irssi plugin which allows connecting to a quassel server.
+Description: API to access a Quassel Core - development headers
+ Library for accessing QuasselCore using the Quassel protocol.
  .
- This package contains the debugging symbols.
+ This package contains the development headers.
