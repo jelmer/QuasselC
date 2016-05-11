@@ -13,15 +13,17 @@ Architecture: any
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: quassel-core
-Description: API to access a Quassel Core
- Library for accessing QuasselCore using the Quassel protocol.
+Description: Library for connecting to Quassel cores
+ This library provides an API for connecting to Quassel servers (cores),
+ allowing for the implementation of custom Quassel UIs or bots.
 
 Package: libquasselc-dev
 Architecture: any
 Section: libdevel
 Priority: extra
 Depends: ${misc:Depends}, libquasselc0 (= ${binary:Version})
-Description: API to access a Quassel Core - development headers
- Library for accessing QuasselCore using the Quassel protocol.
+Description: Library for connecting to Quassel cores
+ This library provides an API for connecting to Quassel servers (cores),
+ allowing for the implementation of custom Quassel UIs or bots.
  .
  This package contains the development headers.
