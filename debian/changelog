@@ -1,4 +1,4 @@
-quasselc (0~git20150406-1) UNRELEASED; urgency=low
+quasselc (0~git20150406-1) experimental; urgency=low
 
   * Initial release. (Closes: #823985)
 
