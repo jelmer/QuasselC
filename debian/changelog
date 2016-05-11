@@ -1,5 +1,5 @@
-quasselc (0~git20150406-1) UNRELEASED; urgency=medium
+quasselc (0~git20150406-1) UNRELEASED; urgency=low
 
-  * Initial release. (Closes: #745371)
+  * Initial release. (Closes: #823985)
 
  -- Jelmer Vernooĳ <jelmer@debian.org>  Thu, 05 May 2016 00:09:20 +0000
