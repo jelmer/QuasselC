@@ -1,7 +1,7 @@
-diff --git a/Makefile b/Makefile
-index 88f8845..600138c 100644
---- a/Makefile
-+++ b/Makefile
+Index: quasselc/Makefile
+===================================================================
+--- quasselc.orig/Makefile
++++ quasselc/Makefile
 @@ -2,7 +2,7 @@ prefix ?= /usr/local
  libdir ?= $(prefix)/lib
  includedir ?= $(prefix)/include
@@ -11,7 +11,7 @@ index 88f8845..600138c 100644
  SO_VERSION = 0
  VERSION = 0
  INSTALL = install
-@@ -15,10 +15,10 @@ lib_objects=setters.o getters.o main.o cmds.o negotiation.o io.o symbols.o
+@@ -15,10 +15,10 @@ lib_objects=setters.o getters.o main.o c
  all: bot libquasselc.so.$(VERSION) quasselc.pc
  
  libquasselc.so.$(VERSION): $(lib_objects)
