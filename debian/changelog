@@ -1,4 +1,4 @@
-quasselc (0~git20150406-2) UNRELEASED; urgency=medium
+quasselc (0~git20161221-1) UNRELEASED; urgency=medium
 
   * New upstream snapshot.
    + Changes license to LGPL-3+.
