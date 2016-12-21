@@ -1,3 +1,10 @@
+quasselc (0~git20150406-2) UNRELEASED; urgency=medium
+
+  * New upstream snapshot.
+   + Changes license to LGPL-3+.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Wed, 21 Dec 2016 16:34:50 +0000
+
 quasselc (0~git20150406-1) experimental; urgency=low
 
   * Initial release. (Closes: #823985)

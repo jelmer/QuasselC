@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 7994eea..5365253 100644
+index 88f8845..600138c 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -2,7 +2,7 @@ prefix ?= /usr/local
@@ -11,14 +11,14 @@ index 7994eea..5365253 100644
  SO_VERSION = 0
  VERSION = 0
  INSTALL = install
-@@ -15,10 +15,10 @@ lib_objects=setters.o getters.o main.o cmds.o display.o negotiation.o io.o
+@@ -15,10 +15,10 @@ lib_objects=setters.o getters.o main.o cmds.o negotiation.o io.o symbols.o
  all: bot libquasselc.so.$(VERSION) quasselc.pc
  
  libquasselc.so.$(VERSION): $(lib_objects)
 -	$(CC) -shared -o $@ -Wl,-soname,libquasselc.so.$(SO_VERSION) $^ $(LDLIBS)
 +	$(CC) -shared -o $@ -Wl,-soname,libquasselc.so.$(SO_VERSION) $^ $(LDLIBS) $(LDFLAGS)
  
- bot: bot.o libquasselc.so.$(VERSION)
+ bot: bot.o display.o libquasselc.so.$(VERSION)
 -	$(CC) -o $@ $^ $(LDLIBS) $(BOTLIBS)
 +	$(CC) -o $@ $^ $(LDLIBS) $(BOTLIBS) $(LDFLAGS)
  
