@@ -1,4 +1,4 @@
-quasselc (0~git20170114-1) UNRELEASED; urgency=medium
+quasselc (0~git20170114-1) experimental; urgency=medium
 
   * New upstream snapshot.
   * Drop patch no_asm_socket.patch: applied upstream.
