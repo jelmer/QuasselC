@@ -1,3 +1,10 @@
+quasselc (0~git20170114-1) UNRELEASED; urgency=medium
+
+  * New upstream snapshot.
+  * Drop patch no_asm_socket.patch: applied upstream.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 14 Jan 2017 20:46:07 +0000
+
 quasselc (0~git20161221-2) experimental; urgency=medium
 
   * Add patch no_asm_socket.patch: fix build on non-Linux platforms by
